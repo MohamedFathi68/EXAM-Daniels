@@ -2,17 +2,12 @@
   box-sizing: border-box;
   margin: 0;
   font-family: "Poppins", sans-serif;
-  outline: 0.02rem solid red;
 }
 
 :root {
   --txt-color-white: #fff;
   --txt-color-black: #000;
   --bg-color: #f7f7f7;
-}
-
-body {
-  min-height: 9000px;
 }
 
 .nav-link.active,
@@ -43,6 +38,32 @@ body {
 .title {
   width: fit-content;
   margin: auto;
+}
+
+.progress {
+  height: 30px;
+  box-shadow: inset -2px 0rem 1rem rgba(0,0,0,.2)
+}
+
+.contact {
+  transition: .3s;
+}
+
+.contact:hover {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.download {
+  transition: .3s;
+  background-color: #000;
+}
+
+.download:hover {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
 }
 
 /*=============== services ===============*/
@@ -219,4 +240,62 @@ body {
 
 #team {
   background-color: var(--bg-color);
+}
+
+.member img {
+  transition: 0.3s;
+}
+
+.member img:hover {
+  scale: 1.2;
+}
+
+.hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  text-align: center;
+  inset: 5px;
+  opacity: 0;
+  transition: 0.5s;
+  transform: rotateY(180deg) scale(0, 0);
+}
+
+.member:hover .hover{
+  opacity: 1;
+  transform: rotateY(0deg) scale(1, 1);
+}
+
+/*=============== contact ===============*/
+
+.logo-c {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: #eee;
+  transition: .3s;
+}
+
+.item-container:hover .logo-c {
+  background-color: #000;
+  color: #fff;
+}
+
+input, textarea {
+  background-color: var(--bg-color);
+  outline: none;
+}
+
+textarea {
+  height: 150px;
+}
+
+#contact button {
+  transition: .3s;
+}
+
+#contact button:hover {
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
 }
