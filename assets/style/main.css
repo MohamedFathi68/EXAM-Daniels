@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  outline: 0.02rem solid red;
+}
+
+:root {
+  --txt-color-white: #fff;
+  --txt-color-black: #000;
+  --bg-color: #f7f7f7;
+}
+
+body {
+  min-height: 9000px;
+}
+
+.nav-link.active,
+.nav-link {
+  color: var(--txt-color-white);
+}
+
+#home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*=============== about ===============*/
+
+.hero-img img {
+  width: 100%;
+}
+
+.hero-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  width: fit-content;
+  margin: auto;
+}
+
+/*=============== services ===============*/
+
+#services {
+  background-color: var(--bg-color);
+}
+
+.dots {
+  position: relative;
+}
+
+.dots::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -30px;
+  bottom: -30px;
+  background-image: url(../img/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+.title h3 {
+  font-weight: 900;
+  font-size: 40px;
+  position: relative;
+  display: inline-block;
+  z-index: 4;
+}
+
+.title h3:after {
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-image: url(../img/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: -1;
+}
+
+.icon {
+  background-color: var(--bg-color);
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.card .icn {
+  transition: 0.3s;
+}
+
+.card:hover .icon {
+  background-color: var(--txt-color-black);
+}
+
+.card:hover .icn {
+  color: white;
+}
+
+/*=============== Portfolio ===============*/
+
+.nav.nav-underline {
+  width: fit-content;
+  margin: auto;
+}
+
+.nav.nav-pills.mb-3 {
+  width: fit-content;
+  margin: auto;
+}
+
+.nav-link.text-dark.active,
+.nav-link.text-dark {
+  background-color: var(--txt-color-white);
+  position: relative;
+  margin: 0 15px;
+  color: #222;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.nav-link.text-dark.active::before {
+  content: "";
+  width: 95%;
+  height: 2px;
+  background: #111;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  z-index: -1;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+.item:hover .img-overlay {
+  opacity: 1;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: #fffffff2;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 2;
+  transform: translateY(10px);
+}
+
+.img-overlay .overlay-icn a {
+  margin: 10px;
+  padding: 3px;
+  text-decoration: none;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  border-radius: 50%;
+  border: 1px solid #111;
+  background: #111;
+  color: #eee;
+}
+
+.img-overlay h4 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/*=============== Clients ===============*/
+
+#clients {
+  background-color: var(--bg-color);
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.img-con {
+  width: 100%;
+}
+
+.carousel-item {
+  height: 300px;
+  padding: 30px;
+}
+
+.carousel-item img {
+  width: 100px;
+}
+
+/*=============== team ===============*/
+
+#team {
+  background-color: var(--bg-color);
+}
